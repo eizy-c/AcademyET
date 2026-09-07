@@ -41,6 +41,14 @@ class Lesson extends Model
     }
 
     /**
+     * Relación con los pasos secuenciales e interactivos de la lección.
+     */
+    public function steps()
+    {
+        return $this->hasMany(LessonStep::class)->orderBy('step_number', 'asc');
+    }
+
+    /**
      * Relación con el registro de progreso de los usuarios.
      */
     public function userProgress()

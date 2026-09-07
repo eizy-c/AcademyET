@@ -95,7 +95,7 @@
         <!-- Renderizado dinámico según la pestaña activa -->
         <div class="flex-1">
             @if($activeTab === 'leccion')
-                @livewire('lesson-viewer', ['lesson' => $activeLesson], key('lesson-'.$activeLessonId))
+                @livewire('interactive-lesson-flow', ['lesson' => $activeLesson], key('flow-'.$activeLessonId))
             @elseif($activeTab === 'calculadora_doblez')
                 @livewire('toolbox.fold-calculator')
             @elseif($activeTab === 'validador_u')
